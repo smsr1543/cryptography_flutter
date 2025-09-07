@@ -110,7 +110,6 @@ class CryptographyFlutterPlugin : FlutterPlugin, MethodCallHandler {
         result.success(list)
     }
 
-
     private fun androidCryptoProvidersAdd(call: MethodCall, result: Result) {
         val provider = Class.forName(call.arguments as String).getConstructor().newInstance()
         Security.addProvider(provider as Provider)
